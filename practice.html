@@ -710,7 +710,7 @@ body {
     <section id="hero" class="hero hero--stack">
       <div class="hero-card">
         <div class="hero-media">
-          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1200&auto=format&fit=crop" alt="면담 장면" />
+          <img src="main_background.png" alt="면담 장면" />
         </div>
         <div class="hero-content">
           <h1>성과관리 면담 시뮬레이터</h1>
@@ -725,22 +725,22 @@ body {
       <div id="personaSelection">
         <div class="selection-grid">
           <div class="card" onclick="selectPersona('low')" title="저성과자">
-            <img class="avatar-round" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="저성과자" />
+            <img class="avatar-round" src="avatar_low.png" alt="저성과자" />
             <h3>저성과자</h3>
             <p>자신감이 낮고 방어적인 태도의 구성원</p>
           </div>
           <div class="card" onclick="selectPersona('mid')" title="중간성과자">
-            <img class="avatar-round" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="중간성과자" />
+            <img class="avatar-round" src="avatar_mid.png" alt="중간성과자" />
             <h3>중간성과자</h3>
             <p>강점·개선점을 균형 있게 인식하는 구성원</p>
           </div>
           <div class="card" onclick="selectPersona('high')" title="고성과자">
-            <img class="avatar-round" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop" alt="고성과자" />
+            <img class="avatar-round" src="avatar_high.png" alt="고성과자" />
             <h3>고성과자</h3>
             <p>임팩트를 강조하고 지원을 명확히 요청하는 구성원</p>
           </div>
           <div class="card" onclick="selectPersona('custom')" title="성격고르기">
-            <img class="avatar-round" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop" alt="성격고르기" />
+            <img class="avatar-round" src="avatar_custom.png" alt="성격고르기" onerror="this.src='avatar_mid.png';" />
             <span class="info-badge">성격고르기</span>
             <h3>맞춤 성격 설정</h3>
             <p>직군/직무/장단점 등 세부 특성을 직접 설정</p>
@@ -858,22 +858,22 @@ body {
             <div id="stageSelection" class="hidden">
         <div class="selection-grid">
           <div class="card" onclick="showGuidancePopup('goal', 'goal', '')">
-            <img class="avatar-round" src="https://placehold.co/92x92/e0e7ff/3730a3?text=🎯" alt="목표설정" />
+            <img class="avatar-round" src="goal_icon.png" alt="목표설정" />
             <h3>목표설정</h3>
             <p>연초 목표 수립 면담을 연습합니다.</p>
           </div>
           <div class="card" onclick="showGuidancePopup('feedback', 'feedback', '')">
-            <img class="avatar-round" src="https://placehold.co/92x92/e0e7ff/3730a3?text=💬" alt="중간피드백" />
+            <img class="avatar-round" src="feedback_icon.png" alt="중간피드백" />
             <h3>중간피드백</h3>
             <p>연중 성과 점검 및 코칭 대화를 연습합니다.</p>
           </div>
           <div class="card" onclick="showGuidancePopup('before', 'evaluation', 'before')">
-            <img class="avatar-round" src="https://placehold.co/92x92/e0e7ff/3730a3?text=📊" alt="최종평가" />
+            <img class="avatar-round" src="evaluation_icon.png" alt="최종평가" />
             <h3>최종평가</h3>
             <p>평가 전 기대 수준 정렬 면담을 연습합니다.</p>
           </div>
           <div class="card" onclick="showGuidancePopup('appeal', 'evaluation', 'appeal')">
-            <img class="avatar-round" src="https://placehold.co/92x92/e0e7ff/3730a3?text=🙋" alt="이의제기" />
+            <img class="avatar-round" src="appeal_icon.png" alt="이의제기" />
             <h3>이의제기</h3>
             <p>평가 이의제기 상황의 면담을 연습합니다.</p>
           </div>
@@ -890,7 +890,7 @@ body {
         <div id="messages" class="messages"></div>
         
         <div id="coachActionBar" class="coach-action-bar hidden">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=50&auto=format&fit=crop&facepad=2&fit=facearea" alt="Coach" class="coach-avatar">
+          <img src="coach_avatar.png" alt="Coach" class="coach-avatar">
           <button id="showCoachTipButton" class="coach-analysis-button">대화 분석하기</button>
         </div>
 
@@ -964,7 +964,7 @@ body {
 
   <div id="coachTipModal" class="modal">
     <div class="modal-content">
-      <h3><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=50&auto=format&fit=crop&facepad=2&fit=facearea" alt="Coach" style="width:30px; height:30px; border-radius:50%; vertical-align:middle; margin-right:10px;">성과관리 코치</h3>
+      <h3><img src="coach_avatar.png" alt="Coach" style="width:30px; height:30px; border-radius:50%; vertical-align:middle; margin-right:10px;">성과관리 코치</h3>
       <button class="modal-close-button" onclick="hideCoachModal()">×</button>
       <div id="coachAnalysisContent" class="modal-summary-content" style="margin-top:15px; margin-bottom:20px; background:#f0f3f5;">
       </div>
@@ -1100,7 +1100,7 @@ function setBubbleText(bubble, text, sentencesPerLine = 2) {
     
 
     // ===== GLOBAL STATE & CONSTANTS =====
-    const AVATARS = { low: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop', mid: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop', high: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop',  custom: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop' };
+    const AVATARS = { low: 'avatar_low.png', mid: 'avatar_mid.png', high: 'avatar_high.png',  custom: 'avatar_custom.png' };
     let currentStage = '', currentScenario = '', currentPersona = 'mid', currentMode = 'general', customPersonaData = null, history = [];
     let useCustomAvatar = false;
     const elMessages = document.getElementById('messages');
@@ -1314,7 +1314,7 @@ function setBubbleText(bubble, text, sentencesPerLine = 2) {
        - 금지어: 내일/다음에/재면담/후속 회기/보고체(…해야 합니다/…의미합니다)/메타어(턴/선택지 등).
 
        [자료 없음/나중에 확인 트리거]
-       - 트리거 예: 자료/기록/근무표/명세서/지표/수치를 지금은 못 봄, 나중에 확인, 보면서 이야기하자, 증거 없음, 스킵 등.
+       - 트리거 예: 자료/기록/근무표/지표/수치를 지금은 못 봄, 나중에 확인, 보면서 이야기하자, 증거 없음, 스킵 등.
        - 절차: 자료 제출을 재요구하지 말고,
         1) 기억·관찰 기반의 대표 상황 1개만(시간·조 포함) 간단 요약 요청 →
         2) 선택지 2개 제공:
@@ -1805,7 +1805,7 @@ if (coachActionBar) {
       const row = document.createElement('div');
       row.className = `row bot error`; // 'error' 클래스를 추가하여 스타일을 다르게 할 수도 있습니다.
       const avatarDiv = document.createElement('div'); avatarDiv.className = 'avatar';
-      const avatarImg = document.createElement('img'); avatarImg.src = 'https://placehold.co/55x55/fecaca/b91c1c?text=!'; avatarImg.alt = 'error_avatar';
+      const avatarImg = document.createElement('img'); avatarImg.src = 'avatar_error.png'; avatarImg.alt = 'error_avatar';
       avatarDiv.appendChild(avatarImg);
       const bubble = document.createElement('div'); bubble.className = 'bubble bot'; // 기본 봇 버블 스타일 사용
       bubble.style.backgroundColor = '#fce4ec'; // 배경색을 붉은 계열로 변경하여 경고 강조
