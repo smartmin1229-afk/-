@@ -78,7 +78,8 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 101,
     name: '김민준',
     position: '기정',
-    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop',
+    // Low performer
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128176.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.Completed, date: '2024-02-15', notes: '수율 개선을 위한 정량적 목표 설정 완료.' },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.InProgress, date: '2024-07-20' },
@@ -90,7 +91,8 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 102,
     name: '이서연',
     position: '주임',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop',
+    // Mid performer
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128335.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.Completed, date: '2024-02-18' },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.Completed, date: '2024-07-22', notes: '표준 작업 절차(SOP) 준수율 우수. 현 상태 유지.' },
@@ -102,7 +104,8 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 103,
     name: '박지훈',
     position: '기정',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
+    // High performer
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128253.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.Completed, date: '2024-02-16' },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.Completed, date: '2024-07-19' },
@@ -114,7 +117,7 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 104,
     name: '최수빈',
     position: '주임',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128335.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.InProgress },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.NotStarted },
@@ -126,7 +129,7 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 105,
     name: '정유진',
     position: '기정',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128253.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.Completed, date: '2024-02-20' },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.NotStarted },
@@ -138,7 +141,7 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 106,
     name: '강태현',
     position: '주임',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128176.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.Completed, date: '2024-02-21' },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.InProgress },
@@ -150,7 +153,7 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 107,
     name: '윤서아',
     position: '기정',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128335.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.Completed, date: '2024-02-19' },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.Completed, date: '2024-07-25' },
@@ -162,7 +165,7 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 108,
     name: '임도윤',
     position: '주임',
-    avatar: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=200&auto=format&fit=crop',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128176.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.NotStarted },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.NotStarted },
@@ -174,7 +177,7 @@ const TEAM_MEMBERS_A: TeamMember[] = [
     id: 109,
     name: '한지우',
     position: '기정',
-    avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=200&auto=format&fit=crop',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/4128/4128253.png',
     performance: [
       { stage: PerformanceStage.GoalSetting, status: PerformanceStatus.Completed, date: '2024-02-25' },
       { stage: PerformanceStage.MidtermFeedback, status: PerformanceStatus.Completed, date: '2024-07-28' },

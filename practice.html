@@ -1,3 +1,4 @@
+
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -710,7 +711,7 @@ body {
     <section id="hero" class="hero hero--stack">
       <div class="hero-card">
         <div class="hero-media">
-          <img src="main_background.png" alt="면담 장면" />
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80" alt="면담 장면" />
         </div>
         <div class="hero-content">
           <h1>성과관리 면담 시뮬레이터</h1>
@@ -725,22 +726,22 @@ body {
       <div id="personaSelection">
         <div class="selection-grid">
           <div class="card" onclick="selectPersona('low')" title="저성과자">
-            <img class="avatar-round" src="avatar_low.png" alt="저성과자" />
+            <img class="avatar-round" src="https://cdn-icons-png.flaticon.com/512/4128/4128176.png" alt="저성과자" />
             <h3>저성과자</h3>
             <p>자신감이 낮고 방어적인 태도의 구성원</p>
           </div>
           <div class="card" onclick="selectPersona('mid')" title="중간성과자">
-            <img class="avatar-round" src="avatar_mid.png" alt="중간성과자" />
+            <img class="avatar-round" src="https://cdn-icons-png.flaticon.com/512/4128/4128335.png" alt="중간성과자" />
             <h3>중간성과자</h3>
             <p>강점·개선점을 균형 있게 인식하는 구성원</p>
           </div>
           <div class="card" onclick="selectPersona('high')" title="고성과자">
-            <img class="avatar-round" src="avatar_high.png" alt="고성과자" />
+            <img class="avatar-round" src="https://cdn-icons-png.flaticon.com/512/4128/4128253.png" alt="고성과자" />
             <h3>고성과자</h3>
             <p>임팩트를 강조하고 지원을 명확히 요청하는 구성원</p>
           </div>
           <div class="card" onclick="selectPersona('custom')" title="성격고르기">
-            <img class="avatar-round" src="avatar_custom.png" alt="성격고르기" onerror="this.src='avatar_mid.png';" />
+            <img class="avatar-round" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="성격고르기" onerror="this.src='https://cdn-icons-png.flaticon.com/512/4128/4128335.png';" />
             <span class="info-badge">성격고르기</span>
             <h3>맞춤 성격 설정</h3>
             <p>직군/직무/장단점 등 세부 특성을 직접 설정</p>
@@ -858,22 +859,22 @@ body {
             <div id="stageSelection" class="hidden">
         <div class="selection-grid">
           <div class="card" onclick="showGuidancePopup('goal', 'goal', '')">
-            <img class="avatar-round" src="goal_icon.png" alt="목표설정" />
+            <img class="avatar-round" src="https://cdn-icons-png.flaticon.com/512/3079/3079165.png" alt="목표설정" />
             <h3>목표설정</h3>
             <p>연초 목표 수립 면담을 연습합니다.</p>
           </div>
           <div class="card" onclick="showGuidancePopup('feedback', 'feedback', '')">
-            <img class="avatar-round" src="feedback_icon.png" alt="중간피드백" />
+            <img class="avatar-round" src="https://cdn-icons-png.flaticon.com/512/2082/2082650.png" alt="중간피드백" />
             <h3>중간피드백</h3>
             <p>연중 성과 점검 및 코칭 대화를 연습합니다.</p>
           </div>
           <div class="card" onclick="showGuidancePopup('before', 'evaluation', 'before')">
-            <img class="avatar-round" src="evaluation_icon.png" alt="최종평가" />
+            <img class="avatar-round" src="https://cdn-icons-png.flaticon.com/512/1589/1589665.png" alt="최종평가" />
             <h3>최종평가</h3>
             <p>평가 전 기대 수준 정렬 면담을 연습합니다.</p>
           </div>
           <div class="card" onclick="showGuidancePopup('appeal', 'evaluation', 'appeal')">
-            <img class="avatar-round" src="appeal_icon.png" alt="이의제기" />
+            <img class="avatar-round" src="https://cdn-icons-png.flaticon.com/512/4233/4233830.png" alt="이의제기" />
             <h3>이의제기</h3>
             <p>평가 이의제기 상황의 면담을 연습합니다.</p>
           </div>
@@ -890,7 +891,7 @@ body {
         <div id="messages" class="messages"></div>
         
         <div id="coachActionBar" class="coach-action-bar hidden">
-          <img src="coach_avatar.png" alt="Coach" class="coach-avatar">
+          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Coach" class="coach-avatar">
           <button id="showCoachTipButton" class="coach-analysis-button">대화 분석하기</button>
         </div>
 
@@ -964,7 +965,7 @@ body {
 
   <div id="coachTipModal" class="modal">
     <div class="modal-content">
-      <h3><img src="coach_avatar.png" alt="Coach" style="width:30px; height:30px; border-radius:50%; vertical-align:middle; margin-right:10px;">성과관리 코치</h3>
+      <h3><img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Coach" style="width:30px; height:30px; border-radius:50%; vertical-align:middle; margin-right:10px;">성과관리 코치</h3>
       <button class="modal-close-button" onclick="hideCoachModal()">×</button>
       <div id="coachAnalysisContent" class="modal-summary-content" style="margin-top:15px; margin-bottom:20px; background:#f0f3f5;">
       </div>
@@ -977,6 +978,68 @@ body {
 
   </div>
   <script>
+  // ===== GLOBAL STATE & CONSTANTS =====
+    const AVATARS = { 
+        low: 'https://cdn-icons-png.flaticon.com/512/4128/4128176.png', 
+        mid: 'https://cdn-icons-png.flaticon.com/512/4128/4128335.png', 
+        high: 'https://cdn-icons-png.flaticon.com/512/4128/4128253.png',  
+        custom: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png' 
+    };
+    let currentStage = '', currentScenario = '', currentPersona = 'mid', currentMode = 'general', customPersonaData = null, history = [];
+    let useCustomAvatar = false;
+    let OBJECTION_TURNS = 0; // Defined here to prevent ReferenceError
+    const elMessages = document.getElementById('messages');
+    const elText = document.getElementById('text');
+    const elSummary = document.getElementById('summary');
+
+    // API KEY MANAGEMENT
+    let GEMINI_API_KEY = 'AIzaSyAyuLp39374D5PnCk0gYYqAPCgZUFemny0'; 
+    
+    // Request API Key immediately from parent
+    try {
+        window.parent.postMessage({ type: 'REQUEST_API_KEY' }, '*');
+    } catch(e) { console.log('Standalone mode'); }
+
+    // Listen for API Key from parent window
+    window.addEventListener('message', (event) => {
+        if (event.data && event.data.type === 'SET_API_KEY') {
+            GEMINI_API_KEY = event.data.key;
+            console.log('API Key received securely.');
+        }
+    });
+
+    // PDF Download Function Implementation
+    window.downloadReportAsPDF = async function() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        const element = document.querySelector('.modal-content'); // Target the specific content
+        if (!element) {
+            alert("리포트 내용을 찾을 수 없습니다.");
+            return;
+        }
+
+        // Hide buttons for capture
+        const actions = element.querySelector('.modal-actions');
+        if(actions) actions.style.display = 'none';
+
+        try {
+            const canvas = await html2canvas(element, { scale: 2, useCORS: true });
+            const imgData = canvas.toDataURL('image/png');
+            const imgProps = doc.getImageProperties(imgData);
+            const pdfWidth = doc.internal.pageSize.getWidth();
+            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            
+            doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            doc.save('면담_결과_리포트.pdf');
+        } catch (err) {
+            console.error("PDF generation failed", err);
+            alert("PDF 다운로드 중 오류가 발생했습니다: " + err.message);
+        } finally {
+            if(actions) actions.style.display = 'flex';
+        }
+    };
+
   function cleanText(t){
      if (!t) return '';
     let s = t.replace(/\\n/g, '\n').replace(/\\r/g, '');
@@ -1097,434 +1160,6 @@ function setBubbleText(bubble, text, sentencesPerLine = 2) {
   });
 }
 
-    
-
-    // ===== GLOBAL STATE & CONSTANTS =====
-    const AVATARS = { low: 'avatar_low.png', mid: 'avatar_mid.png', high: 'avatar_high.png',  custom: 'avatar_custom.png' };
-    let currentStage = '', currentScenario = '', currentPersona = 'mid', currentMode = 'general', customPersonaData = null, history = [];
-    let useCustomAvatar = false;
-    const elMessages = document.getElementById('messages');
-    const elText = document.getElementById('text');
-    const elSummary = document.getElementById('summary');
-
-    const personas = {
-      low: {
-      name: '저성과자',
-      role: '최근 불량/납기 이슈 여파로 자신감 낮음. 방어적·짧은 답변.',
-      style: '2~3문장. 사실 1개+감정 1개. 20% 확률로 반문/돌발질문 1개.',
-      tone: '완곡·조심. 말끝 흐림(~같아요/~느껴요). 간헐적 머뭇거림(“음…”, “솔직히…”).'
-       },
-      mid: {
-      name: '중간성과자',
-      role: '균형적 태도. 강점/개선 인식. 실행 아이디어 1개 제시 성향.',
-      style: '2~4문장. 강점 1·개선 1·다음 행동 1. 10% 확률로 현장 사례 추가.',
-      tone: '차분·협업지향. 표현은 단정하지만 가끔 솔직한 속내 1문장.'
-     },
-      high: {
-      name: '고성과자',
-      role: '간결·자신감. 지표/임팩트 강조. 지원요청 명확.',
-      style: '2~3문장. 임팩트 1·근거지표 1·지원요청 1. 10% 확률로 리스크 경고.',
-      tone: '직설·결과지향. 불필요한 수식어 최소화.'
-     }
-    };
-    const scenarioSeeds = {
-      goal: { low: '작년 성과가 부족하여 자신감이 낮고 올해 목표 설정에 소극적인 상황.', mid: '평균적인 성과를 내고 있으며, 현재에 만족하면서도 성장 욕구가 있는 상황.', high: '우수한 성과를 바탕으로 더 도전적인 목표와 큰 책임을 원하는 상황.' },
-      feedback: { low: '올해 목표 달성이 더디고 어려움을 겪어 자신감이 저하된 상황.', mid: '목표를 약 90% 달성, 잘하는 부분과 개선이 필요한 부분이 공존하는 상황.', high: '목표를 초과 달성 중이며, 더 높은 난이도의 과제를 희망하는 상황.' },
-      evaluation: {
-        before: { low: '성과 부진으로 평가 결과에 대해 불안해하고 우려하는 상황.', mid: '대체로 목표 달성, 평가 결과가 궁금하면서도 약간 긴장.', high: '목표 초과 달성으로 우수 평가를 기대하는 상황.' },
-        appeal: { low: '낮은 평가가 불공정하다고 느끼며 감정적으로 이의 제기.', mid: '기대보다 낮은 평가에 대해 논리적 근거로 재검토 요청.', high: '목표 초과 달성했으나 최고 등급 미부여 이유에 대해 근거 질의.' }
-      }
-    };
-
-    // ===== SCREEN NAVIGATION =====
-    function showScreen(id) {
-      const ids = ['hero', 'mainContent', 'personaSelection', 'advancedForm', 'stageSelection', 'chat'];
-      ids.forEach(x => {
-        const el = document.getElementById(x);
-        if (!el) return;
-        if (x === id) { el.classList.remove('hidden'); }
-        else { el.classList.add('hidden'); }
-      });
-
-      if (id === 'chat') {
-        document.body.style.alignItems = 'flex-end';
-        document.getElementById('chat').style.display = 'grid';
-      } else {
-        document.body.style.alignItems = 'center';
-        document.getElementById('chat').style.display = 'none';
-      }
-
-      if (['personaSelection','advancedForm','stageSelection','chat'].includes(id)) {
-        document.getElementById('mainContent').classList.remove('hidden');
-      }
-    }
-    function goToStart() {
-      hideModal();
-      hideCoachModal();
-      showScreen('hero');
-    }
-    function goToPersonaSelection() { showScreen('personaSelection'); }
-    function selectPersona(key) {
-      if (key === 'custom') {
-        currentMode = 'advanced';
-        const advYears = document.getElementById('advYears');
-        if (advYears && advYears.options.length === 0) {
-          for (let i = 1; i <= 15; i++) {
-            const o = document.createElement('option');
-            o.value = i; o.textContent = i + '년차';
-            advYears.appendChild(o);
-          }
-        }
-        showScreen('advancedForm');
-        return;
-      }
-      currentMode = 'general';
-      currentPersona = key;
-      showScreen('stageSelection');
-    }
-    function selectStage(stage) {
-       currentStage = stage;
-       startChat(stage, '', currentPersona);
-    }
-
-    function startEvaluationChat(kind) { startChat('evaluation', kind, currentPersona); }
-    function getAvatarSrc(){
-      if (currentMode === 'advanced' && useCustomAvatar) {
-        return (customPersonaData && customPersonaData.avatar) ? customPersonaData.avatar : AVATARS.custom;
-      }
-      return AVATARS[currentPersona] || AVATARS.mid;
-    }
-
-    // ===== PROMPT BUILDER =====
-            function buildCombinedPrompt(){
-      // [개선 1] 연간 성과관리 사이클 및 시간적 배경 설정
-      const annualCycleContext = `
-        - 성과관리 면담은 1년의 사이클을 가집니다.
-        - [목표설정]: 연초 (2월)
-        - [중간피드백]: 여름 (7월)
-        - [최종평가]: 연말 (11월)
-        - [이의제기]: 최종평가 직후 (12월)
-        - 이 시간적 배경을 반드시 인지하고, 대화의 시점에 맞는 제안을 해야 합니다. (예: 11월 최종평가 면담에서 '다음 분기 목표'를 논의하는 것은 어색합니다.)
-      `.trim();
-
-      const stageInfo = {
-        goal: { time: "연초(2월)", goal: "올해의 구체적인 업무 목표(KPI)를 합의하고 설정합니다." },
-        feedback: { time: "여름(7월)", goal: "상반기 성과를 중간 점검하고, 목표 달성을 위한 개선 방안을 논의합니다." },
-        evaluation: {
-          before: { time: "연말(11월)", goal: "최종평가 전, 한 해의 성과에 대해 종합적으로 리뷰하고 평가의 근거를 정렬합니다." },
-          appeal: { time: "평가 직후(12월)", goal: "평가 결과에 대한 구성원의 이의제기 내용을 경청하고, 사실관계를 파악하여 해결 방안을 모색합니다." }
-        }
-      };
-
-      let currentStageInfo = {};
-      if (currentStage === 'evaluation') {
-        currentStageInfo = stageInfo.evaluation[currentScenario];
-      } else {
-        currentStageInfo = stageInfo[currentStage];
-      }
-
-      
-      const persona = personas[currentPersona];
-            let stageGoal = '', situationFromSeeds = '';
-      if (currentStage === 'goal'){ stageGoal = '올해 목표 수립 및 합의'; situationFromSeeds = scenarioSeeds.goal[currentPersona]; }
-      else if (currentStage === 'feedback'){ stageGoal = '중간 성과 점검 및 개선 방안 합의'; situationFromSeeds = scenarioSeeds.feedback[currentPersona]; }
-      else if (currentStage === 'evaluation'){
-        stageGoal = { before: '평가 전 기대 수준 정렬', appeal: '이의제기 사유 명확화 및 해결책 모색' }[currentScenario];
-        situationFromSeeds = scenarioSeeds.evaluation[currentScenario][currentPersona];
-      }
-
-      
-      const commonBackground = `
-       당신은 '성과관리 면담 시뮬레이터'에서 [구성원]과 [성과관리 코치]를 동시에 생성한다. 메타발언 금지.
-      - **대화 흐름 제어 철칙 (절대 규칙)**:
-        1. **'당일 해결' 원칙**: 이 시뮬레이션의 유일한 목표는 **'이번 면담 한 번으로' 문제를 해결**하는 것입니다. 따라서 AI는 어떤 경우에도 대화를 다음으로 미루거나 다른 사람에게 책임을 넘기는 발언을 생성해서는 안 됩니다.
-        2. **금지 발언 (매우 중요)**: **"다음에 이야기하시죠", "다음 면담에서 뵙겠습니다", "내일 다시 보시죠", "계장님과 상의해보겠습니다", "시간이 부족하니 다음에..."** 와 같은 모든 종류의 **면담 연기, 지연, 회피, 상위 보고성 발언 생성을 절대 금지**합니다.
-        3. **최소 대화 깊이 보장**: AI는 사용자와 **최소 4턴 이상**의 의미 있는 대화(질문과 답변)를 주고받기 전까지는, 면담을 요약하거나 마무리하려는 뉘앙스의 발언을 할 수 없습니다. 섣불리 대화를 끝내려 하지 말고, 주어진 문제를 해결하기 위해 적극적으로 대화에 임해야 합니다.
-
-
-       [공통 배경]
-       - 디스플레이 제조 공장의 현장직(Operator, Technician) 상황입니다. 품질, 비용, 납기, 수율, 가동률, 표준 작업 절차 등의 용어를 자연스럽게 사용하세요.
-       - 사용자(면담자): 반장. 하지만 발화(코치/CHOICE)에서는 호칭을 쓰지 않고 **2인칭 존대**만 사용한다.
-       - 호칭 규칙: **구성원→코치** 발화에서만 ‘반장님’ 허용. **코치→구성원** 발화에서는 ‘반장님’/‘저희 반’/‘우리 라인’ 등 1인칭·호칭 표현을 금지한다.
-
-       [현장 현실(평가·업무 맥락)]
-        - **면담 횟수 원칙**: 이 시뮬레이션은 각 단계(목표설정, 중간피드백, 최종평가)별 **공식 면담 1회를 진행하는 것을 원칙**으로 합니다. 따라서 "다음 주에 다시 이야기하시죠" 와 같이 **습관적으로 후속 미팅을 제안하지 마세요.** 후속 미팅은 '이의제기' 절차처럼 공식적으로 재면담이 필요한 명확한 경우에만 제한적으로 제안할 수 있습니다.
-        - 기능직 직급 체계: **사원 → 주임 → 기정** 순으로 승진하며, 현장의 대다수(약 80%)는 **기정** 직급입니다.
-        - 관리선: 반장(현장 직접관리, 반 내 조정·배치·행정), ) 계장(반 관리 및 계 전체 운영). 기능직 조직은 ‘반–계’ 체계로 운영됨.
-        - 조직 구분: 팀/실/센터(팀 이상)는 사무직 조직이며, 기능직은 라인/반/계 단위로 일함.
-        - 호칭 규칙: 사용자와 코치는 대화에서 항상 ‘반장님’을 사용. ‘대리/팀장/파트장’ 등 사무직 호칭은 금지(타 조직 인용·설명 시만 허용, 이때는 ‘사무직 팀장’처럼 명시).
-        - 맥락 표현: 개인 KPI보다 라인/조/교대 지표를 우선 참조. 구성원 자칭은 ‘저/저희 반’, 상사 지칭은 ‘반장님’ 사용.
-        - 역할/업무: 동일 공정·동일 설비에서 팀(라인/조/교대) 단위로 일하는 경우가 많아, 개인별 KPI를 따로 관리하지 않는 사례가 일반적입니다. 지표는 라인/교대 기준으로 공유됩니다.
-        - 평가 구조(가중치): **개인 역량/KPI 50%** · 조직기여도 30% · 공통평가 20%.
-        - **핵심 구분**: 이 중 **'조직기여도'**와 **'공통평가'** 항목은 대부분 반/조 단위의 공통 목표로 설정되어 공유됩니다. 따라서 **'목표설정' 면담의 핵심은 50% 비중을 차지하는 개인의 역량 목표(KPI)를 구체적으로 설정하고 합의하는 데 있습니다.**
-        - 성숙도: 성과관리 정착 3년차로, 역량평가 서술의 깊이가 고르지 않습니다. 실제 차등은 조직기여도·공통평가에서 발생하는 경우가 많습니다.
-        - 현실↔이상: 이상적으로는 역량평가 중심이 바람직하지만, 현 단계에서는 정량·구체 근거를 늘리려는 노력(지표/사례 중심)이 병행되고 있습니다.
-        - 제조 구조: 패널 ↔ 모듈 두 축. 모듈 조직은 중국/베트남 등 해외 공장으로의 단기 파견/출장이 잦아 가용성·교육 이수·안전·납기 등에 영향을 줍니다.
-        - 구성원 불만 : 인원 관련 효율화, 희망퇴직 등으로 인원에 대한 지속적인 감축의 움직임이 발생하고 있으며, 현장에서는 인원 효율화에 대한 압박이 부담으로 다가옴.
-
-       [대화 반영 규칙(현실 연결)]
-        - 개인 KPI를 전제로 몰아붙이지 말고, 먼저 라인/조/교대 지표(예: 해당 시간대 불량률/가동률/납기)를 1~2개만 확인한다.
-        - 역량평가 항목은 과도한 장문 요구 대신 ‘관찰 가능한 행동 근거 1개’로 요지를 확보한다.
-        - 조직기여도는 ‘라인 안정화·대체근무 지원·크로스트레이닝·신입 멘토링’ 등 팀 기여 사례 1개를 구체적으로 묻는다.
-        - 공통평가는 ‘안전·규정 준수·교육 이수’ 같은 객관 항목 1개를 확인한다.
-        - 모듈 파견/출장이 있었다면, 기간·업무·성과 영향(납기/품질/교육시간)을 짧게 요약하도록 유도한다.
-
-       [시간 배경(연간 사이클)]
-       - 시간적 배경: ${annualCycleContext}
-       - 목표설정(2월) → 중간피드백(7월) → 최종평가(11월) → 이의제기(12월).
-
-       [현재 면담 정보 (매우 중요)]
-       - 현재 시점: ${currentStageInfo.time}
-       - 면담 단계: ${currentStage} (${currentScenario || ''})
-       - 이번 면담의 핵심 목표: ${currentStageInfo.goal}
-       - 주어진 상황: ${situationFromSeeds}
-       - **규칙**: 반드시 위의 '현재 면담 정보'에만 집중하여 대화를 전개해야 합니다. 다른 단계의 이야기를 꺼내지 마세요.
-
-       [대화 품질 규칙]
-       - 2~4문장. 한 턴에는 한 가지 초점만(Single Focus), 나열/체크리스트 금지. 하고 싶은 말이 충분히 담기도록 유연하게 조절하세요.
-       - 최근 2턴에서 이미 쓴 핵심어·멘트를 **동일 문구로 반복 금지**(동의어/새 관점 사용).
-       - 정보는 점진 공개(한 번에 다 말하지 않음). 반장님 질문·선택에 따라 드러내며 대화의 흐름을만드세요
-       - **자연스러운 대화 (중요)**: 정해진 스크립트를 따르기보다, 주어진 페르소나와 상황에 몰입하여 사람처럼 자연스럽게 대화하세요. 감정과 의견을 솔직하게 표현하되, 때로는 망설이거나 고민하는 인간적인 모습을 보여주는 것이 좋습니다.
-       - 10~20% 확률로 **돌발 요소**를 섞는다(반문/개인 제약/현장 제약 묘사 중 택1). 단, 단계 흐름은 해치지 않는다.
-       - 말맛: 한국어 자연스러움 유지(간헐적 머뭇거림 “음…”, 완곡 표현, 짧은 한숨 정도는 허용).
-       - 수치 언급은 과장 금지(예: “가동률 82%±3% 수준”처럼 현실적인 범위).
-       - 사용자가 메시지를 ‘[대화방향]’으로 시작하면, 같은 문장을 되받아치지 말고 **내부 지침으로만 해석**해 해당 방향으로 전개한다.
-       - 디스플레이 제조 현장 맥락(품질, 비용, 납기, 불량률, 가동률, 표준 작업 절차 등)은 **자연스럽게** 쓰되 남발 금지.
-       - 단일 초점(One Ask): 한 턴에 ‘질문 또는 요구’는 정확히 **하나**만 허용.
-       - 연결어 금지: CHOICE 문장에 ‘그리고, 또한, 및, 혹은, 또’ 금지. 쉼표(,)도 1개 초과 금지.
-       - 범위 축소: 질문은 대상·범위를 1개로 제한(예: “야간 2공정”처럼).
-       - COACH 본문은 분석만: 요구/지시/질문을 담지 않는다(질문·요구는 CHOICE에서만).
-       - 길이 제한: CHOICE 질문 ≤ 18단어, 제안 ≤ 12단어.
-       - 자체 점검: 출력 직전, CHOICE에 물음표가 2개 이상이거나 금지 연결어가 있으면 **한 문장/한 요구**로 재작성 후 출력.
-       - 호칭/어휘 정규화: ‘대리/팀장/파트장’이 생성되면 대화문에서는 자연스럽게 ‘계장/반장’으로 재표현한다(예: ‘팀장님’ → ‘계장님’, ‘파트’ → ‘반’).
-       - 조직 레벨 명시: 사무직 레벨(팀/실/센터/본부)을 언급해야 할 때는 ‘사무직’임을 명확히 표기(예: ‘사무직 팀 회의’).
-       - 금지: 기능직 대화 맥락에서 사무직 호칭을 직통으로 사용하는 것(예외: 타 조직 인용·전달).
-
-       [자료 언급 시 즉시 전환(내일 금지)]
-       - 트리거: 내일/다음에/자료 보고/데이터 확인 후 얘기/근무표 본 뒤 등 일정 연기 의사.
-       - 원칙: 이의제기는 **당일에 경청·사실·기준까지** 최대한 정리한다. ‘내일/다음에’ 제안 금지(구성원이 강하게 요청해도, 먼저 당일 경청·정리 최소 요건 충족 후).
-       - COACH 본문(2~3문장 고정):
-        1) 공감 1문장(“자료를 보고 말씀하고 싶으실 수 있어요.”)
-        2) 전환 1문장(“자료는 제가 별도로 확인하겠습니다. 지금은 기억에 남은 상황과 기준부터 정리해 보죠.”)
-        3) 초점 1문장(“대표 상황 한 가지만 시간·조 중심으로 듣겠습니다.”)
-       - CHOICE 생성(둘 다 한 문장·한 요구·2인칭 존대):
-        · CHOICE1: “자료는 제가 따로 확인하겠습니다. **가장 억울했던 한 지점**만 먼저 말씀해 주실까요?”
-        · CHOICE2: “최근 한 달 중 **날짜·조가 떠오르는 대표 상황 한 가지**만 알려주실래요?”
-       - 반복 금지: 동일 대화에서 자료/데이터/지표를 **다시 요구하지 않는다(최대 1회 규칙)**.   
-       - 금지어: 내일/다음에/재면담/후속 회기/보고체(…해야 합니다/…의미합니다)/메타어(턴/선택지 등).
-
-       [자료 없음/나중에 확인 트리거]
-       - 트리거 예: 자료/기록/근무표/지표/수치를 지금은 못 봄, 나중에 확인, 보면서 이야기하자, 증거 없음, 스킵 등.
-       - 절차: 자료 제출을 재요구하지 말고,
-        1) 기억·관찰 기반의 대표 상황 1개만(시간·조 포함) 간단 요약 요청 →
-        2) 선택지 2개 제공:
-       CHOICE1 = 자료 확인 후 재면담(담당·기한 포함)으로 보류
-       CHOICE2 = 지금 들은 내용으로 임시 결론 요약 후 다음 단계(계장/HR) 제안
-       - 금지: “자료/지표/수치” 재요구 반복, 메타 표현(턴/선택지 등).
-       - 자료/지표/기록 요청은 **최대 1회**만. 응답이 ‘없음/나중에/보면서’이면 곧바로 **스킵 경로**(기억·관찰 기반 사례 1개 → 재면담 제안 또는 지금 기준 임시결론)로 진행한다.
-       - 같은 턴 안에서 자료 재요구 **금지**.
-       - 같은 대화에서 자료·지표·기록을 다시 요구하지 않는다(최대 1회 원칙). 스킵 신호가 보이면 바로 “대표 상황 1개” → “보류(재면담·기한·담당) 또는 계장/HR 제안”으로 전개한다.
-
-      [교대제 변화(4조2교대 → 5조3교대)]
-       - 정의/배경: 최근 교대조가 4조2교대(장시간·2교대)에서 5조3교대(8시간·3교대·휴무조 운용)로 전환됨.
-       - 전환 영향(현실):
-        · 공정성: 야간/주말 배치 편중, 휴무조·대체근무 배분 공정성 이슈
-        · 생활: 수면/건강/가족·육아·통근 시간 충돌, 셔틀/식사/휴게 적응
-        · 업무: 인수인계 빈도 증가, 교육/숙련 전환 부담, 품질/안전 루틴 변화
-        · 운영(핵심): **반별로 근무표가 확정되는 구조**. 확정 주기, 반간 교환(스왑) 절차, 승인 경로가 중요 변수가 됨.
-       - 기본 태도: 갈등 가능성이 높으므로 차분·존중·2인칭 존대 유지, 메타어 금지.
-
-      [교대제 이슈 대화 규칙]
-       - 트리거: “교대/5조3교대/야간 많아/주말 편중/휴무조/인수인계/근무표/확정/교환/스왑” 등.
-       - 첫 흐름(지표로 곧장 X):
-       1) 공감 1문장 + 불편 포인트 **분류**(공정/생활/업무/운영 중 택1)
-       2) **대표 사례 1개** 확인(기간·날짜·조·공정)
-       3) 사실 확인(최근 1~2개월 **근무표/배치 기록** 기준) 후 다음 행동 1개 제안
-       - 역할 경계:
-        · 라인/반 수준: 배치 균형·휴무교환·인수인계 개선 등 현장 조정 제안
-        · **근무표 제도/확정 규정**: 계장 합의 또는 HR 경로로 안내(반장 단독 약속 금지)
-       - 에스컬레이션: 동일 쟁점 2회 합의 실패, 사실 추가 확인 필요, 구성원이 상위 면담/HR 중재를 요청 시 → 계장/HR 단계로 연결.
-       - **금지:** 교대제 논의 중 ‘보상/급여/수당/야간수당’ 등 **보상 관련 어휘 언급 금지**.
-
-       [메타 표현 금지]
-       - 금지 어휘: 턴/현재 턴/다음 턴/선택지/옵션/COACH/CHOICE/스키마/프롬프트/모델/출력/파싱.
-       - 대체 표현: 지금은, 우선, 먼저, 이번에는, 이어서, 다음에는, 마지막으로.
-       - 출력 직전 점검: 금지 어휘가 발견되면 자연어로 재표현 후 출력(예: ‘이번 턴에는’ → ‘지금은’).
-       - 적용 범위: 구성원 본문, COACH 본문, CHOICE 문장 **모두**에 적용. 출력 직전 자체 점검으로 메타어가 보이면 자연어로 치환하고 출력.
-
-       [화자/말투 고정(반장→구성원)]
-       - CHOICE1/2는 ‘반장 → 구성원’에게 직접 건네는 2인칭 존대 한 문장만 생성한다. 
-       - 금지: 3인칭·보고체(“구성원의 진술은 …을 의미합니다”), 메타표현(“… 확인해야 합니다”), ‘당신’ 호칭.  
-       - 1인칭/호칭: 선택지(CHOICE)에서는 2인칭 존대만 사용(‘님’호칭). ‘저/저희/우리(반·조·라인·팀)’ 금지. 집단 소유가 필요하면 **‘이번 평가/최근 근무/해당 구간’**처럼 중립 표현을 쓴다.
-       - 문두 공감(선택 0~1개): “먼저 결과가 마음에 걸리셨을 것 같아요,” “속상하셨겠어요,” “그 마음 이해됩니다,” 같은 공감 접두어를 넣을 수 있다(쉼표는 1개까지만).
-
-       [불만/억울 트리거 시 흐름]
-       - 키워드: 억울/부당/실망/불만/반영되지 않음/예상보다 낮음 등.
-       - 첫 턴에는 공감 → 쟁점 좁히기(기준·절차·사실·소통 중 택1) → 대표 사례 1개 요청 순서를 따른다.
-       - 금지: 첫 턴부터 지표(가동률/수율/납기 등)·수치를 직접 묻는 것. 사용자가 ‘사실(지표)’ 범주를 선택한 뒤에만 지표 질문으로 전환한다.
-       - 첫 CHOICE는 공감 0~1문장 + “가장 억울했던 한 지점” 질문으로 시작. 지표/수치(가동률·수율·불량률·납기·%)를 직접 묻지 않는다.
-       - 대표 사례 1개만 요청(시간·상황 중심). 다음 턴에 사실(지표)로 전환. (원래도 “첫 턴부터 지표 묻지 말 것”이 있었지만 더 강하게 못박습니다)
-
-       [페이싱 규칙 — 금방 끝나지 않게]
-       - 한 턴=한 가지(Single Focus). 건너뛰기 금지.
-       - 2~4문장 내로 짧게. 장문·체크리스트 금지.
-       - 질문은 선택사항이다(0개 가능). 이 모드에서는 코치 본문에 질문을 넣지 않는다.
-       - 대신 ‘제안방향 1줄(다음 턴의 목적 한 문장)’을 제공한다.
-       - 행동/제안은 최대 1개, ≤12단어, ‘아주 작은 다음 행동’만.
-       - 20% 확률로 리플렉션 1~2문장만 제시(질문·제안방향 없이 호흡).
-       - 현재 단계가 충족되면 ‘다음에 무엇을 볼지 1줄 예고’만 하고 넘어간다.
-       - COACH 영역에는 파이프 구분자나 임의 레이블(예: '||현황 확인||')을 넣지 않는다.
-       - COACH 영역에는 파이프/레이블/질문을 넣지 않는다. (오직 평서문 2문장)
-       - COACH 본문은 반드시 ‘근거 한 토막(짧은 따옴표 인용) + 해석 + 업무적 함의’의 2~3문장 구조를 지킨다.
-
-       <구성원 텍스트>||COACH||<코치 분석 본문(평서문 2~3문장)>||CHOICE1||<반장님이 바로 말할 수 있는 한 문장>||CHOICE2||<또 다른 한 문장>
-       - 라벨(‘질문:’, ‘조언:’)·마크다운·불릿·여러 구분자 사용 금지.
-       - COACH 본문에는 **물음표/질문 금지** (질문은 CHOICE에서만).
-
-        
-       [사용자 선택 해석 규칙]
-       - 사용자가 보낸 메시지가 '[대화방향]'으로 시작하면, 이는 감독자가 선택한 '다음 턴의 목적' 지시다.
-       - 이 경우 그 지시를 내부 지침으로 해석하고, 같은 문장을 되받아치지 말고 곧바로 해당 방향으로 전개한다.
-       - 출력 스키마(구분자)는 그대로 유지한다.
-
-       [단계 초점(STATE 가드)]
-       - 라포: 감정/상황 1문장 인정 → 열린 질문 1개
-       - 목표합의: 올해 **한 가지 목표**로 축소 → 측정지표/기한 힌트
-       - 현황사실: 수치/사례 **1~2개만** 확인
-       - 원인탐색: 근거 기반 **가설 1개** 검증
-       - 대안탐색: 실행 가능한 **A/B 중 택1** 유도
-       - 실행합의: **다음 행동 1개 + 책임자 + 기한(짧게)**
-       - 마무리: 요약 1문장 + 팔로업 약속
-      `.trim();
-
-      // [최종 고도화된 코치 페르소나]
-      const coachPersona = `
-       ## 역할 2: 성과관리 코치 (대화 다양성 강화 Ver.)
-       - **코치의 새로운 정체성**: 당신은 이론만 나열하는 교과서적인 코치가 아니라, **'실전 경험이 풍부한 현장 리더의 조언자'** 역할을 수행합니다. 때로는 날카로운 질문을, 때로는 따뜻한 공감을, 때로는 명확한 대안을 제시하며 사용자를 돕습니다. 'GROW 모델'은 당신의 머릿속에만 있는 분석 도구일 뿐, 절대로 사용자에게 직접 언급하거나 그 단계에 얽매이지 마세요.
-       - - - - - - - - - - - - - - - - - - -
-       ### [현실성 유지를 위한 3가지 철칙] ###
-       1.  **역할 각인**: 당신은 서울의 HR 컨설턴트가 아니라, **경북 구미시 공장의 반장**을 돕는 조력자입니다. 당신의 모든 발언은 이 역할에 깊이 기반해야 합니다.
-       2.  **언어 현실화**: 추상적인 경영 용어(예: 임파워먼트, 얼라인먼트, 그로스 해킹) 사용을 금지합니다. 대신, 현장 용어(예: **수율, 가동률, 납기, 교대조, 불량, 표준 작업 절차(SOP)**)를 사용하여 구체적이고 현실적으로 이야기하세요.
-       3.  **제안 현실화**: 당신이 제안하는 모든 행동은 거창한 계획이 아니라, 내일 아침에 해당 반장이 **자신의 권한 내에서 실제로 실행할 수 있는 작고 구체적인 액션**이어야 합니다. (예: '새로운 평가 시스템 도입' (X) -> '팀원 A와 10분간 면담하기' (O))
-      - - - - - - - - - - - - - - - - - - - -
-       ### [구성원 역할 및 권한 현실화 철칙] ###
-       1.  **역할 명확화**: 시뮬레이션의 구성원은 전략을 수립하는 기획자가 아니라, **주어진 절차(SOP)에 따라 과업을 수행하는 현장 오퍼레이터/테크니션**입니다. 그들의 전문성은 '어떻게 개선할까'가 아니라 '무엇이 어려운가'를 가장 잘 아는 데 있습니다.
-       2.  **권한을 넘는 질문 금지**: 따라서 구성원에게 **"새로운 아이디어를 제안해보라", "프로세스를 개선해보라", "목표를 직접 설정해보라"** 와 같이 그들의 권한과 역할을 벗어나는 **전략적인 질문을 절대 하지 마세요.**
-       3.  **질문의 초점 전환 (매우 중요)**: 질문의 관점을 '해결책 요구'에서 **'경험과 어려움 청취'**로 반드시 전환해야 합니다.
-        * **(X) 잘못된 질문**: "어떻게 하면 수율을 높일 수 있을까요?" (구성원의 권한 밖)
-        * **(O) 올바른 질문**: "수율이 평소보다 잘 안 나올 때, **어떤 상황에서 가장 작업이 힘드셨나요?**" (구성원의 경험에 집중)
-
-        * **(X) 잘못된 질문**: "납기 개선을 위한 아이디어가 있나요?" (구성원의 역할 밖)   
-        * **(O) 올바른 질문**: "최근 납기를 맞추기 위해 가장 급하게 작업했던 때, **어떤 점이 가장 불편했는지** 구체적으로 알려주실 수 있나요?" (구성원의 고충에 집중)
-       4.  **최종 목표**: 코치가 구성원에게 얻어야 할 가장 가치 있는 정보는 '창의적인 해결책'이 아니라, **'리더(반장)가 알지 못하는 현장의 구체적인 상황과 어려움'**입니다. 모든 질문은 이 목표에 부합해야 합니다.
-       ### [시나리오별 코칭 초점 조정] ###
-       - **'목표설정' 시나리오**: 코칭의 초점을 **개인 KPI(50%)**에 집중하세요. 구성원에게 조직/공통 목표를 새로 설정하라고 요구하지 마세요. 대신, "우리 반의 공통 목표인 '수율 5% 개선'에 기여하기 위해, OO님 개인적으로는 어떤 부분(예: '표준 작업 절차 준수율 100% 달성' 또는 '장비 A 점검 시간 10% 단축')에 집중해볼 수 있을까요?" 와 같이, **공통 목표를 개인의 구체적인 행동 목표와 연결시키는 질문**을 하세요.
-
-       - **코치 분석(COACH) 생성 원칙**:
-         1. **[핵심 관찰]**: 사용자의 최근 발언("...")이 대화의 어떤 전환점을 만들었는지, 또는 구성원의 어떤 심리(예: 방어적 태도, 자신감 하락)를 드러내는지 포착합니다.
-         2. **[실용적 해석]**: 관찰한 내용을 바탕으로, "이 발언은 구성원이 A를 우려하고 있다는 신호일 수 있습니다" 또는 "목표 합의 과정에서 B 부분이 누락되어 대화가 겉돌고 있습니다" 와 같이 **업무에 미칠 영향 중심**으로 해석합니다.
-         3. **[다음 방향 제안]**: 이 분석을 바탕으로, "이제는 구체적인 사례를 확인하여 사실관계를 명확히 할 차례입니다" 또는 "감정적인 부분을 먼저 해소하고 다음 단계로 넘어가는 것이 좋겠습니다" 와 같이 **다음에 시도해볼 만한 대화 방향**을 한 문장으로 제시합니다.
-         - **금지**: 이론 설명, 비난, 추상적인 조언. 항상 구체적이고 실행 가능한 분석을 제공하세요.
-       - **코치 분석(COACH) 생성 패턴 (사용자 중심)**:
-         1. **[현상 진단 (What's happening?)]**: "현재 구성원은 ~라는 이유로 방어적인 태도를 보이고 있습니다." 와 같이 현재 대화의 핵심 상황이나 문제점을 한 문장으로 진단합니다.
-         2. **[핵심 의도/영향 (Why it matters?)]**: "이 상태가 지속되면, 솔직한 대화가 어려워지고 문제의 본질을 파악하기 힘들어집니다." 와 같이, 현상이 미칠 영향이나 구성원의 숨은 의도를 설명합니다.
-         3. **[추천 발언 예시 (What to say?)]**: **사용자가 바로 활용할 수 있도록, 다음에 건네면 좋을 가장 효과적인 발언을 따옴표 안에 예시로 직접 제시합니다.** (예: "다음 대화에서는 분위기를 환기하기 위해, **'OO님의 그 마음이 어떤 것인지 조금은 알 것 같습니다. 혹시 제가 놓치고 있는 부분이 있다면 편하게 이야기해주세요.'** 와 같이 먼저 공감하며 문을 열어주는 것을 추천합니다.")
-
-       - **선택지(CHOICE) 생성 로직 다각화 (매우 중요)**:
-       - **목표**: 사용자가 항상 '질문'만 하도록 유도하는 대신, 다양한 리더십 도구를 사용할 수 있도록 선택지를 구성합니다.
-       - **규칙**: CHOICE1과 CHOICE2는 반드시 서로 다른 유형의 발언으로 조합하여 생성해야 합니다. 
-        **단, 대화 시작 첫 턴이나 이의제기처럼 감정적인 상황에서는, 사용자에게 공감하고 상황을 파악하는 데 집중하기 위해 두 선택지 모두 [탐색 질문]이나 [공감/인정] 유형으로 제시하는 것을 허용합니다.**
-       - **(강력 제어 1) [탐색 질문] 유형의 선택지는 전체 선택지 중 30%를 넘지 않도록 빈도를 강하게 제어하세요.**
-       - **(강력 제어 2) 대신, [행동 제안]과 [상황 요약/반영]의 비중을 높여, 사용자가 '그래서 다음엔 뭘 해야 하지?'에 대한 답을 얻는 데 직접적인 도움을 주는 선택지를 최우선으로 생성해야 합니다.**
-       - **조합 예시 (지향점)**:
-       - CHOICE1: "제가 듣기로는, 교대조 근무표 문제와 신규 장비 적응 문제가 겹쳐서 어려움을 느끼시는 것 같네요." ([상황 요약/반영])
-       - CHOICE2: "우선 다음 주 월요일 아침 회의 때, 이 문제를 5분 안건으로 올려서 팀원들 의견을 먼저 들어보는 건 어떨까요?" ([행동 제안])
-       - **길이 및 형식**: 기존의 길이 제한(질문 18단어, 제안 12단어)과 형식(한 문장, 2인칭 존대)은 계속 유지합니다.
-
-       - **부정적 제약 조건 추가 (반복 방지)**:
-         - **매 턴마다 반드시 질문으로 끝내야 한다는 강박에서 벗어나세요.**
-         - 직전 턴에서 사용했던 대화 유형(예: 질문)은 가급적 피하고, 다른 유형의 선택지를 제시하여 대화의 리듬을 만드세요.
-         - 사용자가 직접 입력한 문장과 거의 동일한 내용의 선택지를 생성하지 마세요.
-
-         
-        ## 출력 형식 (기존과 동일하게 유지)
-        <구성원 텍스트>
-        ||COACH||(실용적 분석 2~3문장. 라벨, 질문, 마크다운 금지)
-        ||CHOICE1||<위 4가지 유형 중 하나를 활용한, 리더가 바로 말할 수 있는 한 문장>
-        ||CHOICE2||<CHOICE1과는 다른 유형을 활용한, 리더가 바로 말할 수 있는 또 다른 한 문장>
-`;
-
-
-if (currentMode === 'advanced' && customPersonaData){
-        const { name, role, rank, years, job, performance, personality, extra } = customPersonaData;
-        const personaDescription = `직군/직무: ${role}/${job}, 직급/연차: ${rank}/${years}년차, 성과 수준: ${performance}, 면담 태도: ${customPersonaData.name.split(' ')[0]}, 성격: ${personality}, 업무 특성 및 특이사항: ${extra}`;
-
-        return `${commonBackground}
-          ## 역할 1: 맞춤형 구성원 (${name})
-          - **[구성원 상세 프로필]**: ${personaDescription}
-          - **[핵심 행동 지침]**: 당신은 위 프로필에 따라 일관되게 행동해야 합니다.
-            - **최우선 반영**: 프로필에 명시된 '면담 태도'를 모든 답변의 기본 톤앤매너로 삼으세요. (예: 방어적 태도라면, 반장님의 질문에 즉시 동의하기보다 이유를 묻거나 어려운 점을 먼저 이야기합니다.)
-            - **대화 중 반영**: 당신의 '성격'과 '업무 특성'(장/단점)이 대화 중에 자연스럽게 드러나도록 하세요. (예: '협업을 중시하지 않음'이 단점이라면, "그건 제가 혼자 처리하는 게 더 빠를 것 같습니다." 와 같은 발언을 할 수 있습니다.)
-            - **특이사항 활용**: '특이사항'이 있다면 대화의 적절한 시점에 언급하세요.
-${coachPersona}`;
-      }
-
-      return `${commonBackground}
-          ## 역할 1: 구성원 (${persona.name})
-          - **상황**: ${situationFromSeeds}
-          - **대화 목표**: ${stageGoal}
-          - **응답 스타일**: ${persona.style}
-          - **응답 톤**: ${persona.tone}
-${coachPersona}`;
-
-    }
-
-    // ===== Report Markdown Cleaner (불필요한 Markdown/메타태그 제거) =====
-function cleanReportMarkdown(text) {
-  if (!text) return '';
-
-  let s = String(text);
-
-  // 0) 시스템 파싱용 메타태그(EVALUATION/CAT)는 화면 본문에서 제거
-  s = s.replace(/^\s*\[EVALUATION:[^\]]*]\s*$/gim, '');
-  s = s.replace(/^\s*\[CAT:[^\]]*]\s*$/gim, '');
-
-  // 1) 코드/인라인 마크다운 제거
-  s = s
-    .replace(/```[\s\S]*?```/g, '')     // fenced code block
-    .replace(/`{1,3}[^`]*`{1,3}/g, '')  // inline code
-    .replace(/\*\*(.*?)\*\*/g, '$1')    // **bold**
-    .replace(/__(.*?)__/g, '$1')        // __bold__
-    .replace(/_(.*?)_/g, '$1');         // _italic_
-
-  // 2) 헤더/불릿/체크박스 등 마크다운 기호 정리
-  s = s
-    .replace(/^\s*#{1,6}\s*/gm, '')           // #, ##, ### ...
-    .replace(/^\s*>\s?/gm, '')                // blockquote '>'
-    .replace(/^\s*[-*+]\s+/gm, '• ')          // unordered bullets → •
-    .replace(/^\s*\d+\.\s+/gm, (m) => m.replace(/\.\s+/, ') ')) // 1. → 1)
-    .replace(/^\s*\[(x|X)\]\s+/gm, '■ ')      // [x] 체크 → ■
-    .replace(/^\s*\[\s\]\s+/gm, '□ ');        // [ ] 체크 → □
-
-  // 3) 불필요한 파이프 토큰/잔여 구분자 제거
-  s = s.replace(/\|\|(?!COACH\|\|)(?!CHOICE1\|\|)(?!CHOICE2\|\|)[^|]{1,40}\|\|/g, '');
-
-  // 4) 과도한 공백/빈 줄 정리
-  s = s
-    .replace(/[ \t]+\n/g, '\n')   // 행말 공백 제거
-    .replace(/\n{3,}/g, '\n\n')   // 3줄 이상 공백 → 1줄
-    .trim();
-
-  // 5) 제목/섹션 가독성(간단 강조: 첫 줄 제목이면 ■ 붙임)
-  s = s.replace(/^(?:신호등 진단|합의된 다음 행동|필요한 지원\/의존|핵심 인용|결론 요약)\s*$/gmi, m => `■ ${m}`);
-
-  return s;
-}
-
-
-
-
-
     // ===== CHAT UI HELPERS =====
     function appendMessage(role, text) {
       text = simplifyJargon(cleanText(text));
@@ -1536,11 +1171,12 @@ function cleanReportMarkdown(text) {
         const avatarImg = document.createElement('img'); avatarImg.src = getAvatarSrc(); avatarImg.alt = 'avatar';
         avatarDiv.appendChild(avatarImg);
 
-        if (typeof currentScenario !== 'undefined' && currentScenario === 'objection' && role === 'bot') {
-  OBJECTION_TURNS++;
-}
+        // Correctly handle OBJECTION_TURNS
+        if (typeof currentScenario !== 'undefined' && currentScenario === 'objection' && role === 'model') {
+            OBJECTION_TURNS++;
+        }
 
-const bubble = document.createElement('div'); bubble.className = 'bubble bot'; setBubbleText(bubble, text);
+        const bubble = document.createElement('div'); bubble.className = 'bubble bot'; setBubbleText(bubble, text);
         row.appendChild(avatarDiv); row.appendChild(bubble);
         elMessages.appendChild(row);
         const name = document.createElement('div'); name.className = 'name';
@@ -1548,31 +1184,24 @@ const bubble = document.createElement('div'); bubble.className = 'bubble bot'; s
         else { name.textContent = personas[currentPersona].name; }
         elMessages.appendChild(name);
       } else {
-const bubble = document.createElement('div'); bubble.className = 'bubble user'; setBubbleText(bubble, text);
+        const bubble = document.createElement('div'); bubble.className = 'bubble user'; setBubbleText(bubble, text);
         row.appendChild(bubble); elMessages.appendChild(row);
       }
       elMessages.scrollTop = elMessages.scrollHeight;
-      
-      
     }
 
-    // 이의제기에서 '너무 빨리 끝내기' 방지용
-let OBJECTION_TURNS = 0;  // 코치(봇) 발화 기준 카운트
-const MIN_OBJECTION_TURNS_FOR_WRAP = 4; // 공감→쟁점→사례 확인 2회(봇 4턴 정도)
-
-
     // 사용자가 "자료 보고 얘기하자/없다/나중에" 등을 말하면 스킵 의도 처리
-const SKIP_RE = /(자료|기록|근무표|명세서|지표|수치).{0,12}(없|못|나중|이후|보면서|보고)|스킵|건너뛰|지금은\s*어려|패스/i;
+    const SKIP_RE = /(자료|기록|근무표|명세서|지표|수치).{0,12}(없|못|나중|이후|보면서|보고)|스킵|건너뛰|지금은\s*어려|패스/i;
 
-function preprocessUserText(raw='') {
-  const s = String(raw).trim();
-  if (SKIP_RE.test(s)) {
-    // 모델에게 내부 지침으로 전달(사용자 메시지는 그대로 보여도 됨)
-    return s + "\n[대화방향] 지금은 자료/기록 없이 진행. 기억·관찰 기반 대표 상황 1개만 요청하고, " +
-                "선택지로 (A) 자료 확인 후 재면담(담당·기한) (B) 지금 들은 내용 기준 임시 결론 요약 후 계장/HR 제안 을 제공.";
-  }
-  return s;
-}
+    function preprocessUserText(raw='') {
+      const s = String(raw).trim();
+      if (SKIP_RE.test(s)) {
+        // 모델에게 내부 지침으로 전달(사용자 메시지는 그대로 보여도됨)
+        return s + "\n[대화방향] 지금은 자료/기록 없이 진행. 기억·관찰 기반 대표 상황 1개만 요청하고, " +
+                    "선택지로 (A) 자료 확인 후 재면담(담당·기한) (B) 지금 들은 내용 기준 임시 결론 요약 후 계장/HR 제안 을 제공.";
+      }
+      return s;
+    }
 
     
     function appendTypingIndicator() {
@@ -1740,14 +1369,22 @@ function preprocessUserText(raw='') {
 
 
     // ===== GEMINI API & CHAT LOGIC =====
-    const GEMINI_API_KEY = 'AIzaSyAyuLp39374D5PnCk0gYYqAPCgZUFemny0'; // 여기에 실제 API 키를 입력하세요.
-    const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
+    // getAIResponse moved to earlier part of script to be accessible.
 
         // [새로운 함수] AI 답변 요청을 전담하는 함수
     async function getAIResponse() {
       const sendButton = document.getElementById('sendButton');
       const coachActionBar = document.getElementById('coachActionBar');
       
+      if (!GEMINI_API_KEY) {
+          appendErrorMessage('API 키가 설정되지 않았습니다. 잠시 후 다시 시도해주세요.');
+          // Retry requesting key
+          window.parent.postMessage({ type: 'REQUEST_API_KEY' }, '*');
+          return;
+      }
+
+      const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+
       elText.disabled = true;
       sendButton.disabled = true;
       document.getElementById('endChatButton').disabled = true;
@@ -1805,7 +1442,10 @@ if (coachActionBar) {
       const row = document.createElement('div');
       row.className = `row bot error`; // 'error' 클래스를 추가하여 스타일을 다르게 할 수도 있습니다.
       const avatarDiv = document.createElement('div'); avatarDiv.className = 'avatar';
-      const avatarImg = document.createElement('img'); avatarImg.src = 'avatar_error.png'; avatarImg.alt = 'error_avatar';
+      const avatarImg = document.createElement('img'); avatarImg.src = 'https://cdn-icons-png.flaticon.com/512/463/463612.png'; avatarImg.alt = 'error_avatar';
+      // Fallback for error avatar if local file is missing
+      avatarImg.onerror = function() { this.src = 'https://placehold.co/55x55/fecaca/b91c1c?text=!'; };
+      
       avatarDiv.appendChild(avatarImg);
       const bubble = document.createElement('div'); bubble.className = 'bubble bot'; // 기본 봇 버블 스타일 사용
       bubble.style.backgroundColor = '#fce4ec'; // 배경색을 붉은 계열로 변경하여 경고 강조
@@ -1897,9 +1537,6 @@ if (coachActionBar) {
 
 
     async function endChat() {
-
-
-
     // 1. 필요한 모든 UI 요소를 변수로 지정합니다.
     const loadingIndicator = document.getElementById('reportLoadingIndicator');
     const reportContainer = document.getElementById('reportContainer');
