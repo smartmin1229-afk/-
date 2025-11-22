@@ -1,0 +1,7 @@
+{
+  "name": "성과관리 대시보드",
+  "description": "A dashboard for supervisors to manage team member performance reviews, track progress through a timeline, input interview results, and practice interviews with an AI-powered chatbot.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
